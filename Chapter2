@@ -1,0 +1,135 @@
+______________
+Values & Types
+______________
+
+* string
+* number
+* boolean
+* null and unidentified
+* object
+* symnbol (ES6)
+
+typeof operator - returns "string"
+
+typeof null returns "object"
+
+
+a = unidentified is equivalent to  var a;
+
+_______
+Objects
+_______
+
+* object - Set properties that can hold values of any type.
+
+Properties can be accessed with dot notaion abj.a;
+OR
+bracket notation abj["hello world!"];
+
+var obj = {
+	a: "hello world",
+	b: 42
+};
+
+var b = "a";
+
+obj[b];			// "hello world"
+obj["b"];		// 42
+
+______
+Arrays
+______
+
+* object that holds values of any type, stored in numerically indexed positions.
+
+var arr = ["hi", 24 , true];
+
+arr[0]; // "hi"
+arr[2]; // true
+
+arr.length; // 3
+arr.typeof; // "object"
+
+________
+Function
+________
+
+* Are a subtype of object
+* typeof returns function
+
+function foo() {
+	return 42;
+}
+
+foo.bar = "hello world";
+
+typeof foo;			// "function"
+typeof foo();		// "number"
+typeof foo.bar;		// "string"
+
+
+________________
+Comparing Values
+________________
+
+Coercion
+________
+
+Two forms, explicit and implicit
+
+	* Explicit -- Function is called for type conversion.
+	* Implicit -- Type conversion happens automatically.
+
+Explicit Coercion
+	var a = "42";
+	var b = Number(a);
+
+	typeof a; // "string"
+	typeof b; // "number"
+
+Implicit Coercion
+	var a = "42";
+	var b = a * 1;
+
+	typeof a; // "string"
+	typeof b; // "number"
+	
+
+True & False
+____________
+
+The specific list of "falsy" values in JavaScript is as follows:
+	* "" (empty string)
+	* 0, -0, NaN (invalid number)
+	* null, undefined
+	* false
+
+Any value that's not on this "falsy" list is "truthy." Here are some examples of those:
+	* "hello"
+	* 42
+	* true
+	* [ ], [ 1, "2", 3 ] (arrays)
+	* { }, { a: 42 } (objects)
+	* function foo() { .. } (functions)
+
+Equality
+________
+== checks for value equality with coercion
+=== checks for equality without coercion involved
+
+a = "42";
+b = 42;
+
+a == b; // true
+a === b; // false
+
+!= !== are symmetrical to the rules above
+
+
+Inequality
+__________
+
+There are no "strict" inequality operators ===
+
+
+
